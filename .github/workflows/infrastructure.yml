@@ -20,7 +20,7 @@ workflow_dispatch:
       uses: hashicorp/setup-terraform@v1 # Name of the Action to use
       with: # Parameters for the Action
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-            - name: Terraform Format
+    - name: Terraform Format
       id: fmt
       working-directory: ./infrastructure
       run: terraform fmt -check
